@@ -1,14 +1,13 @@
 package person.birch.thymeleafplayjoy.domain;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Random;
 
-@Setter
-@Getter
+@Data
+@AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Page {
 
     private int number = new Random().nextInt(100);

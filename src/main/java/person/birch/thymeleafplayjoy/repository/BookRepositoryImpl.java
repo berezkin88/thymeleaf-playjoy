@@ -20,7 +20,7 @@ public class BookRepositoryImpl implements BookRepository {
 
     @Override
     public boolean saveAll(List<Book> bookList) {
-        return bookList.addAll(bookList);
+        return books.addAll(bookList);
     }
 
     @Override
@@ -43,5 +43,10 @@ public class BookRepositoryImpl implements BookRepository {
             .filter(book -> book.getTitle().equals(title))
             .findFirst()
             .orElseThrow();
+    }
+
+    @Override
+    public int size() {
+        return books.size();
     }
 }

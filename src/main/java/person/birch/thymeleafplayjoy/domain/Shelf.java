@@ -1,15 +1,14 @@
 package person.birch.thymeleafplayjoy.domain;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Getter
-@Setter
+@Data
+@AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Shelf {
 
     private int id;

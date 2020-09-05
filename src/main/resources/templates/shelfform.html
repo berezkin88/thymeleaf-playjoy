@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Shelf</title>
+</head>
+<body>
+<div>
+    <h1>Create New Shelf</h1>
+</div>
+<div>
+    <form action="/shelves/new" method="post" th:object="${shelf}">
+        <label for="ID">Books</label>
+        <input type="text" th:field="*{id}" id="ID">
+        <label for="books">Books</label>
+        <select th:field="*{books}" id="books">
+            <option th:each="book : ${books}" th:value="${book}" th:text="${book.title}">Some book</option>
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>

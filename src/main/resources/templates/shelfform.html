@@ -14,7 +14,7 @@
         <input type="text" th:field="*{id}" id="ID">
         <label for="books">Books</label>
         <select th:field="*{books}" id="books">
-            <option th:each="book : ${books}" th:value="${book}" th:text="${book.title}">Some book</option>
+            <option th:each="book, iterator : ${booksList}" th:value="${book.isbn}" th:text="${book.title}">Some book</option>
         </select>
         <input type="submit" value="Submit">
     </form>
